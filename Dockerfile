@@ -3,7 +3,7 @@ ENV GOPATH /usr/local/consulta-cpf-cnpj-server
 RUN apt-get update \
 	&& apt-get install -y pkg-config  libcurl4-openssl-dev \
 	&& cd /usr/local \
-	&& git clone https://eminetto@bitbucket.org/coderockr/consulta-cpf-cnpj-server.git \
+	&& git clone git@bitbucket.org:coderockr/consulta-cpf-cnpj-server.git \
 	&& cd consulta-cpf-cnpj-server.git \
 	&& go get github.com/PuerkitoBio/goquery \
 	&& go get github.com/andelf/go-curl \
