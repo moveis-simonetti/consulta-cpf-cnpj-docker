@@ -4,7 +4,7 @@ RUN apt-get update \
 	&& apt-get install -y pkg-config  libcurl4-openssl-dev \
 	&& cd /usr/local \
 	&& git clone git@bitbucket.org:coderockr/consulta-cpf-cnpj-server.git \
-	&& cd consulta-cpf-cnpj-server.git \
+	&& cd consulta-cpf-cnpj-server \
 	&& go get github.com/PuerkitoBio/goquery \
 	&& go get github.com/andelf/go-curl \
     && go get github.com/go-martini/martini \
