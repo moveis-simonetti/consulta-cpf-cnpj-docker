@@ -16,7 +16,7 @@ RUN chmod 600 /root/.ssh/id_rsa* \
 	&& go get github.com/andelf/go-curl \
     && go get github.com/go-martini/martini \
     && go get github.com/ryanuber/go-filecache \
-	&& get github.com/andelf/iconv-go \
+	&& go get github.com/andelf/iconv-go \
 	&& go build
 
 EXPOSE 3000
