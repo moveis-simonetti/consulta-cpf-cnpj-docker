@@ -10,7 +10,9 @@ RUN chmod 600 /root/.ssh/id_rsa* \
     && apt-get update \
     && apt-get install -y pkg-config  libcurl4-openssl-dev \
     && cd /usr/local \
-    && git clone git@bitbucket.org:coderockr/consulta-cpf-cnpj-server.git \
+    && eval "$(ssh-agent -s)" \
+    && ssh-add ~/.ssh/id_rsa \
+    && git clone git@bitbucket.org:moveissimonetti/consulta-cpf-cnpj-server.git \
     && cd consulta-cpf-cnpj-server \
     && go get github.com/PuerkitoBio/goquery \
     && go get github.com/andelf/go-curl \
