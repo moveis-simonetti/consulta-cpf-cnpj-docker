@@ -8,16 +8,16 @@ RUN chmod 600 /root/.ssh/id_rsa* \
     && touch /root/.ssh/known_hosts \
     && ssh-keyscan bitbucket.org >> /root/.ssh/known_hosts \
     && apt-get update \
-	&& apt-get install -y pkg-config  libcurl4-openssl-dev \
-	&& cd /usr/local \
+    && apt-get install -y pkg-config  libcurl4-openssl-dev \
+    && cd /usr/local \
     && git clone git@bitbucket.org:coderockr/consulta-cpf-cnpj-server.git \
-	&& cd consulta-cpf-cnpj-server \
-	&& go get github.com/PuerkitoBio/goquery \
-	&& go get github.com/andelf/go-curl \
+    && cd consulta-cpf-cnpj-server \
+    && go get github.com/PuerkitoBio/goquery \
+    && go get github.com/andelf/go-curl \
     && go get github.com/go-martini/martini \
     && go get github.com/ryanuber/go-filecache \
-	&& go get github.com/andelf/iconv-go \
-	&& go build
+    && go get github.com/andelf/iconv-go \
+    && go build
 
 EXPOSE 3000
 
